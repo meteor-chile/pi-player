@@ -29,3 +29,4 @@ useraccounts:bootstrap
 useraccounts:flow-routing
 arillo:flow-router-helpers
 meteortoys:allthings
+aldeed:template-extension

@@ -1,3 +1,14 @@
+
+.sign-up{
+    margin-left: 5px;
+}
+.image img{
+    margin-top: 5px;
+}
+.search-form> .input-group > .form-group {
+  display: inline;
+}
+
 .current-song{
     overflow:auto;
 }

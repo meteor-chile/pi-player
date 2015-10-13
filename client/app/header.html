@@ -9,18 +9,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <span class="navbar-brand">
-            pi-player
+          <div class="pull-left image">
+            <img src="images/pi.png" class="img-circle avatar pi" alt="Raspberry pi">
+            <img src="images/yt.png" class="img-circle avatar pi" alt="Raspberry pi">
+          </div>
+          <span class="navbar-brand brand">
+            &nbsp;player
           </span>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+        {{#if currentUser}}
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li class="active"><a href="/search">Search</a></li>
+            <li class=""><a href="{{pathFor '/'}}">Home</a></li>
           </ul>
+          <form class="navbar-form navbar-left" action="{{pathFor '/search'}}" role="search">
+            <div class="form-group">
+                <div class="input-group input-group-md">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-play"></i></span>
+                    <div class="icon-addon addon-md">
+                        <input type="text" placeholder="Videos" class="form-control" id="video">
+                        <label for="video" class="glyphicon glyphicon-search" rel="tooltip" title="videos"></label>
+                    </div>
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="submit">Search</button>
+                    </span>
+                </div>
+            </div>
+          </form>
+        {{/if}}
           <ul class="nav navbar-nav navbar-right">
             <li class="active">{{> atNavButton}}</li>
+          {{#unless currentUser}}
+            <li class="">
+              <button class="btn btn-danger sign-up navbar-btn"  type="button">Sign Up</button>
+            </li>
+          {{/unless}}
           </ul>
         </div>
       </div>

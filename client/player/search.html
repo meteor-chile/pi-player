@@ -1,9 +1,24 @@
 <template name="search">
-  <div class="row" style="margin-top: 5%">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="col-md-10">
-        <h1 class="text-center">Search result...</h1>
+<section class="current-playing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          {{> YTPlayer}}
+        </div>
       </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      {{#each searchResults}}
+      <div class="col-xs-6 col-md-6">
+        <a href="#/" class="thumbnail" data-video-id="{{id.videoId}}">
+          <img data-holder-rendered="true" src="{{snippet.thumbnails.medium.url}}" style="display: block;" data-src="holder.js/100%x180" alt="100%x180">
+        </a>
+        <h4 class="media-heading">{{snippet.title}}</h4>
+      </div>
+      {{/each}}
     </div>
   </div>
 </template>

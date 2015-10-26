@@ -30,3 +30,7 @@ useraccounts:flow-routing
 arillo:flow-router-helpers
 meteortoys:allthings
 aldeed:template-extension
+
+renaldo:youtube-api
+http
+hpx7:youtube-iframe-player

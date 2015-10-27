@@ -2,7 +2,7 @@ body { padding-top: 70px; }
 .sign-up{
     margin-left: 5px;
 }
-.image img{
+/*.image img{
     margin-top: 5px;
 }
 .current-song{
@@ -12,10 +12,9 @@ body { padding-top: 70px; }
     float:left;
 }
 .current-song > h1{
-    /*float:left;*/
     padding-top: 20px;
 }
-
+*/
 /*http://bootsnipp.com/snippets/featured/support-glyph-and-fa-icon-inside-input*/
 .center-block {
     float: none;

@@ -1,107 +1,36 @@
 <template name="home">
-  <div class="container">
-    <div class="current-song">
-      <img src="images/meteor.png" class="img-circle current" alt="user profile image">
-      <h1 class="">&nbsp;
-        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-        The cure - Walk
-      </h1>
-    </div>
-    <hr>
-    <br>
-
+  <div class="container-fluid">
     <div class="col-md-6 col-md-offset-3">
+      <div class="media">
+       <div class="media-body">
+        <div class="image">
+          <img src="https://i.ytimg.com/vi/_AOlgzRJ5fc/mqdefault.jpg" class="thumbnail" style="height:150px; width:auto; " alt="user profile image">
+        </div>
+        <br>
+        <a href="#">username</a>
+        <h3 class="media-heading">
+          <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          <b>makiza - la roza de los vientos</b>
+        </h3>
+       </div>
+      </div>
+      <hr>
       <ul>
+      {{#each songs}}
        <li class="media">
          <div class="pull-left image">
-           <img src="images/meteor.png" class="img-circle avatar" style="height:60px; width:auto; " alt="user profile image">
+           <img src="images/meteor.png" class="img-circle" style="height:60px; width:auto; " alt="user profile image">
          </div>
         <div class="media-body">
-         <a href="#">Lucho mario</a>
+         <a href="#">{{username}}</a>
          <h4 class="media-heading">
            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-           <b>diferentes actitudes juveniles - sere curioso</b>
+           <b>{{name}}</b>
          </h4>
         </div>
        </li>
-       <li class="media">
-             <div class="pull-left image">
-               <img src="images/meteor.png" class="img-circle avatar" style="height:60px; width:auto; " alt="user profile image">
-             </div>
-            <div class="media-body">
-             <a href="#">Lucho mario</a>
-             <h4 class="media-heading">
-               <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-               <b>diferentes actitudes juveniles - sere curioso</b>
-             </h4>
-            </div>
-           </li>
-       <li class="media">
-         <div class="pull-left image">
-           <img src="images/meteor.png" class="img-circle avatar" style="height:60px; width:auto; " alt="user profile image">
-         </div>
-        <div class="media-body">
-         <a href="#">Lucho mario</a>
-         <h4 class="media-heading">
-           <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-           <b>diferentes actitudes juveniles - sere curioso</b>
-         </h4>
-        </div>
-       </li>
+      {{/each}}
        </ul>
     </div>
-
-   
-
-
-    <!-- <div class="col-md-6 col-md-offset-3">
-    <p class="text-center">Queue</p>
-      <div class="panel panel-white post panel-shadow">
-        <div class="post-heading">
-          <div class="pull-left image">
-            <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
-          </div>
-          <div class="pull-left meta">
-            <div class="title h5">
-              <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-              <b>diferentes actitudes juveniles - sere curioso</b>
-            </div>
-            <h6 class="minute">Curioso</h6>
-          </div>
-        </div> 
-      </div>
-
-      <div class="panel panel-white post panel-shadow">
-        <div class="post-heading">
-          <div class="pull-left image">
-            <img src="images/meteor.png" class="img-circle avatar" alt="user profile image">
-          </div>
-          <div class="pull-left meta">
-            <div class="title h5">
-              <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-              <b>The cure - Walk</b>
-            </div>
-            <h6 class="minute">Dan</h6>
-          </div>
-        </div> 
-      </div>
-
-      <div class="panel panel-white post panel-shadow">
-        <div class="post-heading">
-          <div class="pull-left image">
-            <img class="media-object img-circle" src="images/meteor-logo.png" alt="">
-            <img src="images/meteor-logo.png" class="img-circle avatar" alt="user profile image">
-          </div>
-          <div class="pull-left meta">
-            <div class="title h5">
-              <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-              <b>RDCP - people</b>
-            </div>
-            <h6 class="minute">Bort</h6>
-          </div>
-        </div> 
-      </div>
-
-    </div> -->
   </div>
 </template>

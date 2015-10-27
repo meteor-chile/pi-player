@@ -31,10 +31,14 @@ Template.search.helpers({
 Template.search.events({
   'click .thumbnail': function(e) {
     e.defaultPrevented
+    e.preventDefault()
     console.log("hola:D")
     console.log(this.id.videoId)
     Session.set('playThisVid', this.id.videoId);
-
+    console.dir(this)
+    var song = {name: this.snippet.title, cover: this.snippet.thumbnails.medium.url}
+    Meteor.call('addSong', song, function(error, result) {
+        FlowRouter.go('home');
+    });
   }
 });
-
